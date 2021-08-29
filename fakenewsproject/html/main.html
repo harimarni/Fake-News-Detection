@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Fake News Detection</title>
+
+<style type="text/css">
+	body,html{
+	height:100%;
+	margin:0px;
+	text-align:center;
+	}
+	h1{
+	margin-top:0px;
+	}
+	.login{
+	text-align:center;
+	font-size:15px;
+	background-image:url('https://miro.medium.com/max/1580/1*OT_N4E4FjLnwoxu58dcOJA.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position:center;
+	height:100%;
+	}
+	input{
+	border-color:white;
+	text-align:center;
+	}
+	button{
+	color:black;
+	}
+	
+	
+</style>
+  
+</head>
+
+<body>
+ <div class="login">
+ <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+ 
+	<h1 style="color:white;">Fake News Detection</h1>
+		
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="news" placeholder="Enter the news url" required="required" />
+		<br/><br/>
+        <button type="submit" >Predict</button>
+
+    </form>
+	<br/>
+
+    <p id="a" style="color:rgb(0,255,0);"></p>
+	<p id="b" style="color:rgb(255,0,0);"></p>
+
+ </div>
+
+
+ 
+ 
+ <script type="text/javascript">
+ if("{{ans}}"=="REAL")
+	document.getElementById("a").innerHTML="This news is Real.";
+ else if("{{ans}}"=="FAKE")
+	document.getElementById("b").innerHTML="This news is Fake.";
+ </script>
+ 
+
+
+</body>
+</html>
