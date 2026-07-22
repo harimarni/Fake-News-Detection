@@ -10,7 +10,7 @@ The original academic project has now been revisited and prepared as a deployabl
 
 ## 🚀 Live Demo
 
-**Live Application:** https://fake-news-detection-4l8r.onrender.com
+**Live Application:** https://fake-news-detection-4l8r.onrender.comgit 
 
 The live version focuses on the core Fake News Detection functionality and allows users to analyze news content directly through a web interface.
 
