@@ -1,0 +1,13 @@
+{
+  "dataset_rows": 6335,
+  "real_rows": 3171,
+  "fake_rows": 3164,
+  "evaluation_split": "80/20 stratified holdout, random_state=42",
+  "holdout_accuracy": 0.9045,
+  "weighted_precision": 0.9059,
+  "weighted_recall": 0.9045,
+  "weighted_f1": 0.9044,
+  "algorithm": "TF-IDF + Multinomial Naive Bayes",
+  "naive_bayes_alpha": 0.01,
+  "note": "Metrics are evaluation results from a fixed holdout split; final deployment model is retrained on the full bundled dataset."
+}
